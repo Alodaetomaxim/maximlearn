@@ -17,6 +17,9 @@ public class SampleGUI extends Application {
 
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         launch(args);
+
+
+
     }
 
     @Override
