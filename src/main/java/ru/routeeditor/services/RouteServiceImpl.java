@@ -12,13 +12,23 @@ import java.util.List;
 /**
  * Created by sichev on 07.04.2017.
  */
-public class IRoutService implements IRouteService{
+public class RouteServiceImpl implements IRouteService {
+
     @Override
     public List<Route> list(int limit, int offset) {
+
         List<Route> routs = new LinkedList<>();
 
-        for (int i = 0; i < 100; i++) {
-            routs.add(new Route((long) i, "Route # "+i, "Zalupa "+i+" zalupa", Instant.now(), RouteTypes.GEO_CALC));
+
+
+        for (int i = offset; i < limit; i++) {
+            routs.add(new Route(
+                    (long) i,
+                    "Route # "+i,
+                    "Zalupa "+i+" zalupa",
+                    Instant.now(),
+                    RouteTypes.GEO_CALC)
+            );
         }
 
         return routs;
@@ -27,12 +37,12 @@ public class IRoutService implements IRouteService{
     @Override
     public List<GeoPointContainer> loadGeometry(long id) {
 
-        List<GeoPointContainer> geometries = new LinkedList<GeoPointContainer>();
+        List<GeoPointContainer> geometry = new LinkedList<GeoPointContainer>();
 
         for (int i = 0; i < 100; i++) {
-            geometries.add(new GeoPointContainer((double) i*6.66,(double) i*3.14));
+            geometry.add(new GeoPointContainer((double) i*6.66,(double) i*3.14));
         }
 
-        return geometries;
+        return geometry;
     }
 }

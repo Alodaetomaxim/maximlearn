@@ -17,16 +17,14 @@ public class SampleGUI extends Application {
 
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         launch(args);
-
-
-
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Route Service");
 
         Label helloworld = new Label("Hello world!");
+
 
 
         VBox root = new VBox();
@@ -34,7 +32,7 @@ public class SampleGUI extends Application {
                 helloworld
         );
 
-        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.setScene(new Scene(root, 1000, 700));
         primaryStage.show();
     }
 }
