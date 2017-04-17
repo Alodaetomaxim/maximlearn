@@ -19,8 +19,6 @@ public class RouteServiceImpl implements IRouteService {
 
         List<Route> routs = new LinkedList<>();
 
-
-
         for (int i = offset; i < limit; i++) {
             routs.add(new Route(
                     (long) i,
